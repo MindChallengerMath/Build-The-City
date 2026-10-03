@@ -12,3 +12,7 @@ while running:
     for event in pyg.event.get():
         if event.type == pyg.QUIT:
             running = False
+
+    screen.fill((66, 63, 63))
+    screen.convert
+    pyg.display.update()

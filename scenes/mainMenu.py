@@ -1,4 +1,5 @@
 import pygame as pyg
+import time
 pyg.init()
 
 screen = pyg.display.set_mode((800, 400))
@@ -13,6 +14,8 @@ darkStartButton = pyg.image.load("images/darkStartButtonBTC.png")
 
 lightExitButton = pyg.image.load("images/exitButtonBTC.png")
 darkExitButton = pyg.image.load("images/darkExitButtonBTC.png")
+def button():
+    pass
 
 startButtonImg = lightStartButton
 exitButtonImg = lightExitButton
@@ -25,12 +28,14 @@ exitButtonY = 200
 # if pyg.mouse.get_pos() == startButtonX: 
 #       startButtonImg = darkStartButton
 def start():
-    if pyg.MOUSEBUTTONDOWN:
+
+    mouseCoord = pyg.mouse.get_pos()
+    if mouseCoord[0] == startButtonX:
         startButtonImg = darkStartButton
+    
 def displayButtons():
     screen.blit(startButtonImg, (startButtonX, startButtonY))
     screen.blit(exitButtonImg, (exitButtonX, exitButtonY))
-    start()
 
 
 running = True

@@ -27,14 +27,13 @@ exitButtonY = 200
 #Tried def start(): 
 # if pyg.mouse.get_pos() == startButtonX: 
 #       startButtonImg = darkStartButton
-def start():
-
+class start(pyg.sprite.Sprite):
+    def __init__(self):
+        pass
     mouseCoord = pyg.mouse.get_pos()
-    time.sleep(3)
-    print(mouseCoord[0])
-    print(mouseCoord[1])
-    #if mouseCoord[0] == startButtonX:
-    #    startButtonImg = darkStartButton
+    
+    if mouseCoord[0] == startButtonX:
+       startButtonImg = darkStartButton
     
 def displayButtons():
     screen.blit(startButtonImg, (startButtonX, startButtonY))
@@ -51,6 +50,9 @@ while running:
 
     screen.fill((66, 63, 63))
     start()
+    #mouseCoord = pyg.mouse.get_pos()
+    #if mouseCoord[0] == startButtonX:
+    #    startButtonImg = darkStartButton
     displayButtons()
     
     #This updates the screen

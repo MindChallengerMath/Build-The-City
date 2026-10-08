@@ -30,8 +30,11 @@ exitButtonY = 200
 def start():
 
     mouseCoord = pyg.mouse.get_pos()
-    if mouseCoord[0] == startButtonX:
-        startButtonImg = darkStartButton
+    time.sleep(3)
+    print(mouseCoord[0])
+    print(mouseCoord[1])
+    #if mouseCoord[0] == startButtonX:
+    #    startButtonImg = darkStartButton
     
 def displayButtons():
     screen.blit(startButtonImg, (startButtonX, startButtonY))
